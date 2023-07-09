@@ -1,0 +1,27 @@
+{
+  "name": "@sc/function",
+  "version": "0.0.1",
+  "description": "通用公共方法",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "typings": "lib/index.d.ts",
+  "sideEffects": [
+    "dist/*",
+    "*.less"
+  ],
+  "scripts": {
+    "build": "father-build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
