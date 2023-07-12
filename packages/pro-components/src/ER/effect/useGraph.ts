@@ -11,7 +11,26 @@ import G6, { Graph } from '@antv/g6';
 import { useEffect, useRef, useState } from 'react';
 import { register } from '../register';
 import { data } from '../data';
+import G6Pplugin from '../../G6P/plugins';
+const timeBarData = [];
 
+for (let i = 0; i < 100; i++) {
+  timeBarData.push({
+    date: `2020${i}`,
+    value: Math.round(Math.random() * 300),
+  });
+}
+const timebar = new G6Pplugin.TimeBar({
+  x: 0,
+  y: 0,
+  width: 20,
+  height: 400,
+  padding: 10,
+  type: 'trend',
+  trend: {
+    data: [],
+  },
+});
 export const useGraph = () => {
   const [graph, setGraph] = useState<Graph>();
   const container = useRef<HTMLDivElement>();
@@ -20,8 +39,8 @@ export const useGraph = () => {
     register();
     const g = new G6.Graph({
       container: container.current,
-      width: 800,
-      height: 1000,
+      width: 400,
+      height: 400,
       defaultNode: {
         size: [300, 400],
         type: 'dice-er-box',
@@ -56,7 +75,8 @@ export const useGraph = () => {
         nodesepFunc: () => 0.2,
         ranksepFunc: () => 0.5,
       },
-      animate: true,
+      plugins: [timebar],
+      fitView: true,
     });
     setGraph(g);
     g.data(data);

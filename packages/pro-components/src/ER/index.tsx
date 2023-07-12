@@ -10,13 +10,14 @@
 import React, { useEffect } from 'react';
 import { useGraph } from './effect';
 import { GraphContext } from './utils';
+import styles from './index.module.less';
 
 function ER() {
   const { graph, container } = useGraph();
 
   return (
     <GraphContext.Provider value={{ graph }}>
-      <div ref={container} />
+      <div className={styles.container} ref={container} />
     </GraphContext.Provider>
   );
 }
