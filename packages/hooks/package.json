@@ -9,10 +9,6 @@
     "build": "father-build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "peerDependencies": {
-    "ppfish": "^1.7.6",
-    "react": "^18.x"
-  },
   "license": "ISC",
   "publishConfig": {
     "registry": ""

@@ -13,14 +13,7 @@
     "build": "father-build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "peerDependencies": {
-    "ppfish": "^1.7.6",
-    "react": "^18.x"
-  },
   "license": "ISC",
-  "publishConfig": {
-    "registry": ""
-  },
   "repository": {
     "type": "git",
     "url": ""
@@ -32,6 +25,11 @@
   "dependencies": {
     "@antv/g6": "^4.8.19",
     "@babel/runtime-corejs3": "^7.14.0",
-    "react-jss": "^10.10.0"
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@react-three/drei": "^9.80.0",
+    "@react-three/fiber": "^8.13.6",
+    "@types/three": "^0.154.0",
+    "three": "^0.154.0"
   }
 }
